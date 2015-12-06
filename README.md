@@ -1,8 +1,10 @@
 # Postal.js + React
 
-Seamlessly bringing [postal.js](https://github.com/postaljs/postal.js)'s message bus into your React components.
+Seamlessly bringing [postal.js](https://github.com/postaljs/postal.js)'s message bus into 
+your [React](http://facebook.github.io/react/) components.
 
-[![Build Status](https://travis-ci.org/ludwigschubert/postal-react-mixin.svg?branch=master)](https://travis-ci.org/ludwigschubert/postal-react-mixin) [![npm version](https://badge.fury.io/js/postal-react-mixin.svg)](http://badge.fury.io/js/postal-react-mixin)
+[![Build Status](https://travis-ci.org/ludwigschubert/postal-react-mixin.svg?branch=master)](https://travis-ci.org/ludwigschubert/postal-react-mixin) 
+[![npm version](https://badge.fury.io/js/postal-react-mixin.svg)](http://badge.fury.io/js/postal-react-mixin)
 
 ## Overview
 
@@ -76,7 +78,7 @@ I recommend to use a tool like Webpack or Browserify to include the `'postal-rea
 in your dependencies.
 
 ```js
-import PostalReactMixin from 'postal-react-mixin'
+import PostalReactMixin from 'postal-react-mixin';
 
 // ...
 ```
