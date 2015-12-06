@@ -1,0 +1,38 @@
+{
+  "name": "postal-react-mixin",
+  "version": "1.0.0",
+  "description": "A ReactJS component mixin adding postal.js message bus behaviors to components, including declarative subscriptions.",
+  "scripts": {
+    "test": "jshint postal-react-mixin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ludwigschubert/postal-react-mixin.git"
+  },
+  "keywords": [
+    "react",
+    "postal",
+    "subscribe",
+    "publish",
+    "bus",
+    "mixin",
+    "messaging",
+    "subscriptions"
+  ],
+  "author": "Ludwig Schubert <github@ludwigschubert.de> (http://ludwig.schubert.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ludwigschubert/postal-react-mixin/issues"
+  },
+  "homepage": "https://github.com/ludwigschubert/postal-react-mixin#readme",
+  "dependencies": {
+    "postal": "^1.0.7"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  },
+  "jshintConfig": {
+    "esnext": true,
+    "node": true
+  }
+}
