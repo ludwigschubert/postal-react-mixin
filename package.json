@@ -1,6 +1,6 @@
 {
   "name": "postal-react-mixin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A ReactJS component mixin adding postal.js message bus behaviors to components, including declarative subscriptions.",
   "scripts": {
     "test": "jshint postal-react-mixin.js"
