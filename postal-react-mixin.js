@@ -2,24 +2,24 @@
  * Copyright 2015-2016, Ludwig Shcubert.
  * All rights reserved.
  *
- * @providesModule PostalReactMixin
+ * @providesModule postalReactMixin
  * @typechecks static-only
  */
 
 'use strict';
 
-import Postal from 'postal';
+var postal = require('postal');
 
-const PostalReactMixin = {
+module.exports = {
 
-  _defaultPostalChannel: 'PostalReactMixinChannel',
+  _defaultPostalChannel: 'postalReactMixinChannel',
 
   /**
   * Exposed methods
   */
 
   subscribe: function( topic, callback ) {
-    this._postalSubscriptions[topic] = Postal.subscribe({
+    this._postalSubscriptions[topic] = postal.subscribe({
         channel: this.channel || this._defaultPostalChannel,
         topic: topic,
         callback: callback
@@ -27,7 +27,7 @@ const PostalReactMixin = {
   },
 
   publish: function( topic, data ) {
-    Postal.publish({
+    postal.publish({
       channel: this.channel || this._defaultPostalChannel,
       topic: topic,
       data: data
@@ -42,9 +42,9 @@ const PostalReactMixin = {
     if (!this.hasOwnProperty("_postalSubscriptions")) {
         this._postalSubscriptions = {};
     }
-    for (const topic in this.subscriptions) {
+    for (var topic in this.subscriptions) {
       if (this.subscriptions.hasOwnProperty(topic)) {
-        const callback = this.subscriptions[topic];
+        var callback = this.subscriptions[topic];
         this.subscribe(topic, callback);
       }
     }
@@ -59,7 +59,7 @@ const PostalReactMixin = {
   */
 
   _unsubscribe: function() {
-    for (const topic in this._postalSubscriptions) {
+    for (var topic in this._postalSubscriptions) {
       if (this._postalSubscriptions.hasOwnProperty(topic)) {
         this._postalSubscriptions[topic].unsubscribe();
       }
@@ -68,5 +68,3 @@ const PostalReactMixin = {
   }
 
 };
-
-module.exports = PostalReactMixin;
