@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git://github.com/ludwigschubert/postal-react-mixin.git"
   },
+  "main": "postal-react-mixin.js",
   "files": [
     "postal-react-mixin.js",
     "LICENSE",
