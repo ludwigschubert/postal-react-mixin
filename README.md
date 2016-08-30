@@ -70,6 +70,23 @@ let MessageSuggestion = React.createClass({
 
 Whenever this component mounts, it will subscribe to the given topics.
 
+### Customizing channel
+
+By default all the subscriptions are made on the same default channel, but you can customzie the channel by declaring it in your component:
+
+```js
+
+let MessageSuggestion = React.createClass({
+  mixins: [PostalReactMixin],
+  channel: 'customChannelName',
+  
+// ...
+```
+
+### Multi-channel support
+
+We are [currently evaluating reasonable syntax for supporting multiple channels here](https://github.com/ludwigschubert/postal-react-mixin/issues/1). If you are interested in this usecase, please chime in about what syntax to support.
+
 ## Getting Started
 
 PostalReactMixin is available from [npm](https://www.npmjs.com/package/postal-react-mixin).
